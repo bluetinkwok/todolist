@@ -70,8 +70,17 @@ This project is a Todo List application built with Node.js, Express, TypeScript,
 | Todo App          | `http://localhost:3000` |                           |
 | API               | `http://localhost:8080` |                           |
 | Swagger UI        | `http://localhost:8080/api-docs` |                           |
-| pgAdmin           | `http://localhost:8081` | Email: `admin@admin.com` <br> Password: `admin` |
+| pgAdmin           | `http://localhost:8081` | Email: `todolist@test.com` <br> Password: `todolist` |
+| Postregsql        | `http://localhost:5432` | DB: `todolist` <br/> User: `todolist` <br/> Password: `todolist` |
 
+Todo App <br/>
+<img src="./images/web app.png" alt="alt text" width="1000"/>
+
+Swagger <br/>
+<img src="./images/swagger.png" alt="alt text" width="1000"/>
+
+pgAdmin <br/>
+<img src="./images/pgadmin.png" alt="alt text" width="1000"/>
 
 ## Load Test with JMeter
 
