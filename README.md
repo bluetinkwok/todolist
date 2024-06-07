@@ -53,12 +53,12 @@ This project is a Todo List application built with Node.js, Express, TypeScript,
     
 7. Apply database migrations:
     ```bash
-    docker-compose exec todolist-backend-1 npx knex migrate:latest --knexfile src/db/knexfile.ts
+    docker exec todolist-backend-1 npx knex migrate:latest --knexfile knexfile.ts
     ```
 
 8. Seed the database (optional)
     ```bash
-    docker-compose exec todolist-backend-1 npx knex seed:run --knexfile src/db/knexfile.ts
+    docker exec todolist-backend-1 npx knex seed:run --knexfile knexfile.ts
     ```
 
 9. Unit test for frontend application
