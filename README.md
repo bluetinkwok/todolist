@@ -64,6 +64,15 @@ This project is a Todo List application built with Node.js, Express, TypeScript,
     docker exec todolist-backend-1 npm test
     ```
 
+### Application Link and Login
+| Application       | URL                     | Login Details             |
+|-------------------|-------------------------|---------------------------|
+| Todo App          | `http://localhost:3000` |                           |
+| API               | `http://localhost:8080` |                           |
+| Swagger UI        | `http://localhost:8080/api-docs` |                           |
+| pgAdmin           | `http://localhost:8081` | Email: `admin@admin.com` <br> Password: `admin` |
+
+
 ## Load Test with JMeter
 
 ### Install JMeter
