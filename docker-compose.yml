@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - '8080:8080'
+    env_file:
+      - ./backend/.env.docker
+    depends_on:
+      - postgres
+      - redis
+      - pgbouncer
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./frontend:/app
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: todolist
+      POSTGRES_PASSWORD: todolist
+      POSTGRES_DB: todolist
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./docker/postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: todolist@test.com
+      PGADMIN_DEFAULT_PASSWORD: todolist
+    ports:
+      - "8081:80"
+    depends_on:
+      - postgres
+    volumes:
+      - ./docker/servers.json:/pgadmin4/servers.json
+
+  pgbouncer:
+    image: edoburu/pgbouncer
+    ports:
+      - '6432:6432'
+    depends_on:
+      - postgres
+    volumes:
+      - ./docker/pgbouncer:/etc/pgbouncer

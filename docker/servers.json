@@ -1,0 +1,14 @@
+{
+    "Servers": {
+      "1": {
+        "Name": "todolist",
+        "Group": "Servers",
+        "Host": "postgres",
+        "Port": 5432,
+        "MaintenanceDB": "todolist",
+        "Username": "todolist",
+        "Password": "todolist",
+        "SSLMode": "prefer"
+      }
+    }
+  }
