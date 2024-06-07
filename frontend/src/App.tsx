@@ -32,11 +32,11 @@ const App: React.FC = () => {
         <Row gutter={[16, 16]} justify="center">
           <Col xs={24} md={18} lg={12}>
             <div>
-              <Title level={3} style={{ margin: 0 }}>Add Todo</Title>
-              <Text>To add a todo, just fill the form below and click in add todo.</Text>
+              <Title level={3} style={{ margin: 0 }}>Todo APP</Title>
+              <Text>To add a task, just fill the form below and click in add todo.</Text>
             </div>
             <div className="site-layout-content">
-              <Title level={4}>Create a new todo</Title>
+              <Title level={4}>Create a new task</Title>
               <TodoForm onAddTodo={handleAddTodo} />
             </div>
 

@@ -37,7 +37,7 @@ const TodoForm: React.FC<TodoFormProps> = ({ onAddTodo }) => {
                 <Col xs={24} sm={6}>
                     <Form.Item>
                         <Button type="primary" htmlType="submit" icon={<PlusOutlined />}>
-                        Add todo
+                        Add Task
                         </Button>
                     </Form.Item>
                 </Col>
