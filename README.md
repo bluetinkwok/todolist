@@ -2,7 +2,11 @@
 
 ## Project Introduction
 
-This project is a Todo List application built with Node.js, Express, TypeScript, PostgreSQL. It provides both web frontend and restful API endpoints for managing tasks. The project is containerized using Docker and includes load testing configurations with Apache JMeter.
+This project is a Todo List application built with Node.js, Express, TypeScript, PostgreSQL, pgAdmin and pgBouncer. It provides both web frontend and restful API endpoints for managing tasks. The project is containerized using Docker and includes load testing configurations with Apache JMeter.
+
+### Overall Strucrture
+
+<img src="./images/structure.png" alt="alt text" width="1000"/>
 
 ## Step-by-Step Setup
 
@@ -12,7 +16,7 @@ This project is a Todo List application built with Node.js, Express, TypeScript,
 - [Docker](https://www.docker.com/get-started)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
-### Setup Instructions
+### Setup Instructions 
 
 1. **Clone the repository**:
 
