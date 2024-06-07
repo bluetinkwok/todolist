@@ -10,9 +10,10 @@ services:
     env_file:
       - ./backend/.env.docker
     depends_on:
-      - postgres
-      - redis
-      - pgbouncer
+      postgres:
+        condition: service_healthy
+      pgbouncer:
+        condition: service_healthy
     volumes:
       - ./backend:/usr/src/app
       - /usr/src/app/node_modules
@@ -35,6 +36,8 @@ services:
       POSTGRES_DB: todolist
     ports:
       - "5432:5432"
+    healthcheck:
+      test: pg_isready -U postgres
     volumes:
       - ./docker/postgres_data:/var/lib/postgresql/data
 
@@ -47,7 +50,8 @@ services:
     ports:
       - "8081:80"
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
     volumes:
       - ./docker/servers.json:/pgadmin4/servers.json
 
@@ -56,6 +60,12 @@ services:
     ports:
       - '6432:6432'
     depends_on:
-      - postgres
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "todolist", "-d", "todolist", "-h", "localhost", "-p", "6432"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
     volumes:
       - ./docker/pgbouncer:/etc/pgbouncer
