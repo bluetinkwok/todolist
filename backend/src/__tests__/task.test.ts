@@ -49,7 +49,7 @@ describe('Task Routes', () => {
         .send({ id: task_id, status: TaskStatus.Completed });
 
         expect(response.status).toBe(200);
-        expect(response.body).toHaveProperty('status', String(TaskStatus.Completed));
+        expect(response.body).toHaveProperty('status', TaskStatus.Completed);
     });
 
     it('should get tasks by status', async () => {
