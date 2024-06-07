@@ -22,15 +22,18 @@ This project is a Todo List application built with Node.js, Express, TypeScript,
 
    ```bash
    git clone https://github.com/bluetinkwok/todolist.git
-   cd your-repo-name
+   cd todolist
+   ```
 
 2. Navigate to the backend directory:
     ```bash
     cd backend
+    ```
 
 3. Install dependencies:
     ```bash
     npm install
+    ```
 
 4. Navigate to the frontend directory:
     ```bash
