@@ -65,11 +65,13 @@ This project is a Todo List application built with Node.js, Express, TypeScript,
     ```bash
     docker exec todolist-frontend-1 npm test
     ```
+    <img src="./images/frontend_test.png" alt="alt text" width="300"/>
 
 10. Unit test for backend application
     ```bash
     docker exec todolist-backend-1 npm test
     ```
+    <img src="./images/backend_test.png" alt="alt text" width="250"/>
 
 ### Application Link and Login
 | Application       | URL                     | Login Details             |
