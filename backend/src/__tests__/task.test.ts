@@ -43,7 +43,6 @@ describe('Task Routes', () => {
     });
 
     it('should update the status of a task', async () => {
-        console.log('Task ID:', task_id);
         const response = await request(app)
         .post('/api/tasks/status')
         .send({ id: task_id, status: TaskStatus.Completed });
