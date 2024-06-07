@@ -21,7 +21,7 @@ This project is a Todo List application built with Node.js, Express, TypeScript,
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/bluetinkwok/todolist.git
    cd your-repo-name
 
 2. Navigate to the backend directory:
